@@ -1,0 +1,79 @@
+﻿@{
+    Layout = null;
+}
+
+<!-- 2018.05.27 김진민-->
+<!-- 2018.05.27 김진민-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3학년 5반 웹사이트</title>
+    <!-- 3학년 5반 웹사이트 관련 stylesheet-->
+    <link rel="stylesheet" href="../../css/style_jm.css">
+    <!-- Google Web Font 나눔고딕 글꼴 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+</head>
+<body>
+    <!-- 2018.06.12 koo : include html file-->
+    @Html.Partial("MenuBar")
+
+    <div id="container">
+        <br /><br /><br /><br /><br />
+        <div class="titlebar"><br /><a class="seat" href="@Url.Action("seat")">청소와 자리 바꾸기</a></div>
+        <div id="block">
+            <center>
+                <fieldset>
+                    <legend> FRONT </legend>
+                    <table class="left">
+                        <tr>
+                            <td><b>@ViewBag.Name1</b><br />@ViewBag.Clean1</td>
+                            <td><b>@ViewBag.Name2</b><br />@ViewBag.Clean2</td>
+                        </tr>
+                        <tr>
+                            <td><b>@ViewBag.Name3</b><br />@ViewBag.Clean3</td>
+                            <td><b>@ViewBag.Name4</b><br />@ViewBag.Clean4</td>
+                        </tr>
+                        <tr>
+                            <td><b>@ViewBag.Name5</b><br />@ViewBag.Clean5</td>
+                            <td><b>@ViewBag.Name6</b><br />@ViewBag.Clean6</td>
+                        </tr>
+                        <tr>
+                            <td><b>@ViewBag.Name7</b><br />@ViewBag.Clean7</td>
+                            <td><b>@ViewBag.Name8</b><br />@ViewBag.Clean8</td>
+                        </tr>
+                        <tr>
+                            <td><b>@ViewBag.Name9</b><br />@ViewBag.Clean9</td>
+                            <td><b>@ViewBag.Name10</b><br />@ViewBag.Clean10</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td><b>@ViewBag.Name11</b><br />@ViewBag.Clean11</td>
+                            <td><b>@ViewBag.Name12</b><br />@ViewBag.Clean12</td>
+                        </tr>
+                        <tr>
+                            <td><b>@ViewBag.Name13</b><br />@ViewBag.Clean13</td>
+                            <td><b>@ViewBag.Name14</b><br />@ViewBag.Clean14</td>
+                        </tr>
+                        <tr>
+                            <td><b>@ViewBag.Name15</b><br />@ViewBag.Clean15</td>
+                            <td><b>@ViewBag.Name16</b><br />@ViewBag.Clean16</td>
+                        </tr>
+                        <tr>
+                            <td><b>@ViewBag.Name17</b><br />@ViewBag.Clean17</td>
+                            <td><b>@ViewBag.Name18</b><br />@ViewBag.Clean18</td>
+                        </tr>
+                        <tr>
+                            <td><b>@ViewBag.Name19</b><br />@ViewBag.Clean19</td>
+                            <td><br /></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </center>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+﻿<!--이유리-->
+@{
+    /*
+    Layout = null;
+    System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(Server.MapPath(@"~/images/"));
+    int count = 0;
+    if( dir.GetFiles() != null )
+    {
+        count = dir.GetFiles().Length;
+    }
+   
+    System.Diagnostics.Trace.WriteLine("/////////////" + count);
+
+
+
+
+    string[] stringArray = new string[count];
+    var j = 0;
+    System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(Server.MapPath(@"~/images/"));
+
+    foreach (var item in di.GetFiles())
+    {
+        // 파일 이름 출력
+        stringArray[j] = item.Name;
+        System.Diagnostics.Trace.WriteLine("FILE NAME : " + item.Name);
+        j++;
+    }
+
+    var imagePath = "";
+    imagePath = @"~/images/";
+
+    */
+
+
+}
+<!DOCTYPE html>
+
+<html lang="ko" style="background-color:#FFF;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3학년 5반 웹사이트</title>
+    <!-- 3학년 5반 웹사이트 관련 stylesheet-->
+    <link rel="stylesheet" href="../../css/GalleryStyle.css">
+    <!-- Google Web Font 나눔고딕 글꼴 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 2018.06.12 koo : include html file-->
+    @Html.Partial("MenuBar")
+
+    <!-- 이미지 modal 띄우기 -->
+    <button id="add-img"></button>
+
+    <!--이미지 불러오기-->
+    <div id="img-div">
+        <div id="img-list-box" class="masonry">
+            @{/*
+                for (int i = 0; i < count; i++)
+                {
+                    var imgArray = stringArray[i];
+                    var src = imagePath + imgArray;
+                    <div class="item"><img src="@src" id="img-resize" /></div>
+                }
+            }*/
+              }
+            @{
+                int i = 1;
+                    foreach (string iter in ViewBag.theImages)
+                    {
+                        <div class="item"><img src="~/images/@iter" id="img-resize" /></div>
+                        i++;
+                    }
+            }
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div id="dialog-text">사진 추가</div>
+            <form action="" method="post" enctype="multipart/form-data">
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div id="modal-div">
+                        <div id="file-div">
+                            <input type="text" id="fileName" class="file_input_textbox" readonly="readonly" placeholder="선택된 사진이 없습니다">
+                            <div class="file_input_div">
+                                <input type="file" name="file" id="file-find" onchange="javascript: document.getElementById('fileName').value = this.value" />
+                            </div>
+                        </div>
+                        <input type="button" value="취소하기" id="close-btn">
+                        <input type="submit" value="등록하기" id="add-btn" />
+                    </div>
+                }
+
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <footer>
+            <a href="https://www.facebook.com/%EB%AF%B8%EB%A6%BC%EA%B8%89%EC%8B%9D%EC%95%8C%EB%A6%BC%EC%9D%B4-1050294678336290/" target="_blank">미림급식알리미</a> | <a href="https://www.facebook.com/groups/389540621509553/" target="_blank">3학년 5반 페이지</a> | <a href="#">구글 클래스룸</a> 2018. 구지원, 김민경, 김진민, 이유리, 홍하은 .all rights reserved. 담임 백현정 선생님
+
+            <p> </p>
+        </footer>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("add-img");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementById("close-btn");
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

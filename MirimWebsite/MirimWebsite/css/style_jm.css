@@ -1,0 +1,597 @@
+/* 2018.05.24~ 김진민 CSS*/
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    background-color: #f5f5f5;
+    font-family: 'Nanum Gothic', sans-serif;
+    overflow: hidden;
+}
+
+hr
+{
+    width: 95%;
+    border : 0.5px solid #cecece;
+
+}
+
+.ho:hover{
+    opacity:0.7;
+}
+
+.navbar
+{
+    width: 100%;
+    height:7%;
+    background-color:white;
+    box-shadow: 1px 1px 13px #cecece;
+    z-index: 1;
+}
+
+.navbar img
+{
+    width: 2.8%;
+    height: 60%;
+    float : left;
+    margin-top: 0.5%;
+    margin-left: 1%;
+}
+
+.navbar .nav-title
+{
+    color : #008156;
+    font-weight: bold;
+    font-size : 16pt;
+    text-decoration: none;
+    float : left;  
+    padding-top: 1%;
+    padding-left : 0.8%;
+}
+.navbar .nav-item
+{
+    color : #353535;
+    font-size:14pt;
+    text-align: right;
+    text-decoration: none;
+    float : right; 
+    margin: 1%;
+    padding-right : 1%;
+}
+
+
+.navbar .nav-item:hover
+{
+    color : #008156;
+    font-weight: bold;
+  
+}
+
+
+.section
+{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.section .gallery
+{
+    width : 32%;
+    height: 70%;
+    top: 17%;
+    left: 5%; 
+    float: left;
+    background-color: white;
+    box-shadow: 0px 1px 13px #cecece;
+    border-radius: 20px;
+    position: fixed;
+    overflow: hidden;
+}
+
+.section .gallery .title
+{
+    width: 100%;
+    height: 12%;
+}
+
+.section .gallery .title a
+{
+    color : #353535;
+    font-size : 14pt;
+    float: left;
+    text-decoration: none;
+    margin-left : 5%;
+    margin-top : 5%;
+}
+
+.section .gallery .title a:hover
+{
+    color : #008156;
+    font-weight: bold;
+}
+
+.section .gallery .imgslider
+{
+    width: 100%;
+    height: 75%;
+    background-position:center;
+    background-size:cover;
+}
+
+#imgSlide1{
+     background-image: url("../img/mirim_school.jpg");
+}
+
+#imgSlide2{
+     background-image: url("../img/mirim_school.jpg");
+}
+
+#imgSlide3{
+     background-image: url("../img/mirim_school.jpg");
+}
+
+.section .gallery .date
+{
+    float: right; 
+    font-size : 14pt;
+    margin-right : 5%;
+    margin-top : 5%;
+}
+
+.section .notice
+{
+    width : 37%;
+    height: 35%;
+    top: 17%;
+    left: 40%;
+    background-color: white;
+    box-shadow: 0px 1px 13px #cecece;
+    border-radius: 20px;
+    background-color: white;
+    position: fixed;
+    overflow: hidden;
+    
+}
+
+.section .notice .title
+{
+    width: 100%;
+    height: 12%;
+}
+
+.section .notice .title a
+{
+    color : #353535;
+    font-size : 14pt;
+    float: left;
+    text-decoration: none;
+    margin-left : 3%;
+    margin-top : 3%;
+}
+
+.section .notice .title a:hover
+{
+    color : #008156;
+    font-weight: bold;
+}
+
+
+.section .timeTable
+{
+    color : #353535;
+    width : 15%;
+    height: 35%;
+    top: 17%;
+    left: 80%; 
+    float: right;
+    background-color: white;
+    box-shadow: 0px 1px 13px #cecece;
+    border-radius: 20px;
+    position: fixed;
+    overflow: hidden;
+}
+
+.section .timeTable .title
+{
+    width: 100%;
+    height: 12%;
+}
+
+.section .timeTable .title .day
+{
+    color : #008156;
+    font-weight: bold;
+}
+
+.section .timeTable .title a
+{
+    color : #353535;
+    font-size : 14pt;
+    float: left;
+    text-decoration: none;
+    margin-left : 8%;
+    margin-top : 8%;
+}
+
+.section .timeTable .content
+{
+    margin-left : 10%;
+    font-size : 12pt;
+    line-height: 25pt;
+
+}
+
+.section .timeTable .lesson
+{
+   font-weight: bold;
+   margin-right: 5%;
+   
+}
+
+.section .calendar
+{
+    width : 55%;
+    height: 30%;
+    top: 58%;
+    left: 40%;
+    background-color: white;
+    box-shadow: 0px 1px 13px #cecece;
+    border-radius: 20px;
+    background-color: white;
+    position: fixed;
+
+}
+
+
+.section .calendar .title
+{
+    width: 100%;
+    height: 12%;
+}
+
+.section .calendar .title a
+{
+    color : #353535;
+    font-size : 14pt;
+    float: left;
+    text-decoration: none;
+    margin-left : 3%;
+    margin-top : 3%;
+}
+
+.section .calendar .title a:hover
+{
+    color : #008156;
+    font-weight: bold;
+}
+
+.section .floatDiv
+{
+    width:30%;
+   
+    background-color: white;
+    box-shadow: 0px 1px 13px #cecece;
+    border-radius: 20px;
+    position: relative;
+    top:14%;
+    left:32%;
+    display: none;
+}
+
+.section #noticeDiv
+{
+    height: 57%;
+}
+
+.section .floatDiv .divTitle
+{
+    color:#008156;
+    margin-left: 15%;
+    font-size:1.3em;
+}
+
+.inputText
+{
+    width:57%;
+    line-height: 300%;
+    text-indent: 3%;
+    font-family: 'Nanum Gothic', sans-serif;
+    border-style: solid;
+    border-color: #CCC;
+    border-width: 0px 0px 1px 0px;
+    
+}
+
+.inputText:focus
+{
+   outline:none;
+   border-color: #008156;
+}
+
+.holdTextArea
+{
+    width:78%;
+    height:180px;
+    border-radius: 5px;
+    font-family: 'Nanum Gothic', sans-serif;
+    border:1px solid #CCC;
+    text-indent: 3%;
+}
+
+.holdTextArea:focus
+{
+    outline:none;
+    border:1px solid #008156;
+}
+
+.section .floatDiv .divForm
+{
+    margin-left:15%;
+}
+
+
+.inputTime
+{
+    width:26%;
+    line-height: 300%;
+    text-indent: 3%;
+    font-family: 'Nanum Gothic', sans-serif;
+    border-style: solid;
+    border-color: #CCC;
+    border-width: 0px 0px 1px 0px;
+}
+
+.inputTime:focus
+{
+    outline:none;
+    border-color: #008156;
+}
+
+.wave
+{
+    color:rgb(168, 165, 165);
+    font-size:1.2em;
+}
+
+
+.okBtn
+{
+    width:30%;
+    padding:2%;
+    background-color: #008156;
+    color:white;
+    border-style: none;
+    font-family: 'Nanum Gothic', sans-serif;
+    border-radius: 50px;
+}
+
+.okBtn:focus
+{
+    outline: none;
+}
+
+.okBtn:hover
+{
+    background-color: #02583c;
+}
+
+.cancelBtn
+{
+    width:30%;
+    padding:2%;
+    background-color: white;
+    color:#008156;
+    border-style: none;
+    font-family: 'Nanum Gothic', sans-serif;
+    border-radius: 50px;
+    border-color: #008156;
+    border-width: 1px;
+    border-style: solid;
+    margin-left:4%;
+}
+
+.modal-background{
+    width: 100%; 
+    height: 100%; 
+    background-color: #000; 
+    opacity: 0.2;
+    position:absolute;
+    display:none
+}
+
+.space
+{
+    width: 9%;
+    display: inline-block;
+}
+.cancelBtn:focus
+{
+    outline: none;
+}
+
+.cancelBtn:hover
+{
+    border-width: 2px;
+}
+
+.floatBtn
+{
+    width:50%;
+    height: 50%;
+}
+
+.floatBtn:hover{
+    opacity:0.7;
+}
+
+
+.floatBtnLo
+{
+  top:87%;
+  left:93%;
+  position: fixed;
+}
+
+.cancel
+{
+    float: right;
+    font-size:1.6em;
+    padding-bottom: 5%;
+    margin-right: 8%; 
+    color: rgb(168, 165, 165);
+}
+
+.inputFile
+{
+    width:60%;
+    line-height: 300%;
+    text-indent: 3%;
+    font-family: 'Nanum Gothic', sans-serif;
+    border-style: solid;
+    border-color: #CCC;
+    border-width: 0px 0px 1px 0px;
+    
+}
+
+.inputFile:focus
+{
+   outline:none;
+   border-color: #008156;
+}
+
+
+.section #materialsDiv
+{
+    height: 38%;
+}
+
+.fileBtn
+{
+    width: 10%;
+    height: 10%;
+}
+hr
+{
+    width: 25%;
+    border : 0.5px solid #008156;
+
+}
+
+.titlebar
+{
+    width: 220px;
+    height:65px;
+    margin:auto;
+    background-color:#008156;
+    color:#ffffff;
+    text-align:center;
+    box-shadow: 1px 1px 13px #cecece;
+    z-index: 1;
+    border-radius: 40px;
+    align-content:center;
+}
+
+fieldset {
+	border-color: #008156; 
+	border-width: 1px 0 0 0;
+    width:700px;
+    margin:auto;
+    margin-top:10px;
+    align-content:center;
+}
+
+legend {
+    margin:auto;
+	text-align: center;	
+    color:#008156;
+}
+
+table{
+    border:1px;
+    margin:auto;
+    border-radius:40px;
+    box-shadow: 1px 1px 13px #cecece;
+    text-align:center;
+    width:300px;
+    height:550px;
+    color:#7a7c7c;
+    background-color:#ffffff;
+    margin-top:10px;
+    padding:30px;
+    float:left;
+    align-content:center;
+    /*margin-right:10%;
+    margin-left:25px;*/
+
+}
+
+table.left{
+    margin-left:4%;
+    margin-right:6%;
+}
+
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#d5d5d5;
+    color: white;
+    text-align: center;
+}
+
+#footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#008156;
+    color: white;
+    text-align: center;
+    white-space:nowrap;
+    padding:25px;
+    text-align:center;
+}
+
+sub{
+    font-size:2px;
+    color:red;
+}
+
+.seat a { 
+    text-decoration: none;
+    color:white;
+}
+
+.seat a:hover{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+
+
+#container {
+    text-align:center; 
+}
+
+
+#block { 
+    display:inline-block;
+}
+
+.seat{
+    text-decoration: none;
+    color:white;
+}
+
+hr
+{
+    width: 95%;
+    border : 0.5px solid #cecece;
+
+}

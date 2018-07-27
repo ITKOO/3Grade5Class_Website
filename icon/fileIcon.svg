@@ -1,0 +1,15 @@
+<svg id="ic_insert_drive_file_black_24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.225 164.225">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7d7d7d;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="패스_25" data-name="패스 25" class="cls-1" d="M17.685,2A13.667,13.667,0,0,0,4.068,15.685L4,125.169a13.667,13.667,0,0,0,13.617,13.685H99.8a13.726,13.726,0,0,0,13.685-13.685V43.056L72.427,2Zm47.9,47.9V12.264L103.219,49.9Z" transform="translate(23.371 11.685)"/>
+  <path id="패스_26" data-name="패스 26" class="cls-2" d="M0,0H164.225V164.225H0Z"/>
+</svg>

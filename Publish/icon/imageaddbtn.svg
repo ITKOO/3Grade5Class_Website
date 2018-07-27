@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 105 105">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #008156;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        filter: url(#타원_4);
+      }
+    </style>
+    <filter id="타원_4" x="0" y="0" width="105" height="105" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_394" data-name="그룹 394" transform="translate(-1108.5 -264.5)">
+    <g class="cls-3" transform="matrix(1, 0, 0, 1, 1108.5, 264.5)">
+      <circle id="타원_4-2" data-name="타원 4" class="cls-1" cx="36" cy="36" r="36" transform="translate(16.5 13.5)"/>
+    </g>
+    <g id="icon" transform="translate(1142.049 296.3)">
+      <path id="패스_29" data-name="패스 29" class="cls-2" d="M6.355,5.891a2.5,2.5,0,1,0,2.5,2.5A2.5,2.5,0,0,0,6.355,5.891Z" transform="translate(2.007 1.776)"/>
+      <path id="패스_30" data-name="패스 30" class="cls-2" d="M19.3,9.848a4.89,4.89,0,0,0,1.928.376c1.844,0,3.337-.9,3.337-2.013S23.068,6.2,21.224,6.2a4.934,4.934,0,0,0-1.865.345,1.21,1.21,0,0,0-.841-.345h-.486a1.192,1.192,0,0,0-1.178,1.067c-1.5.157-2.6.7-2.6,1.344,0,.771,1.555,1.393,3.486,1.393A8.092,8.092,0,0,0,19.3,9.848Z" transform="translate(7.415 1.936)"/>
+      <path id="패스_31" data-name="패스 31" class="cls-2" d="M36.873,16.882V3.219a.743.743,0,0,0-.745-.742H.754A.749.749,0,0,0,0,3.219V33.836a.75.75,0,0,0,.754.746h23.5a10.912,10.912,0,1,0,12.623-17.7ZM16.7,14.363C12.664,10.328,8.757,25.94,8.757,25.94H3.415V5.861H34.082v9.862a10.845,10.845,0,0,0-12.9,6.563A21.184,21.184,0,0,0,16.7,14.363ZM31.332,34.779a8.5,8.5,0,1,1,8.5-8.5A8.5,8.5,0,0,1,31.332,34.779Z" transform="translate(0 0)"/>
+      <path id="패스_32" data-name="패스 32" class="cls-2" d="M24.271,14.223H20.642V18.36H16.42v3.629h4.222v4.258h3.629V21.989h4.175V18.36H24.271Z" transform="translate(8.543 6.111)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg id="ic_mode_edit_black_24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #008156;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="패스_18" data-name="패스 18" class="cls-1" d="M3,22v5H8L22.744,12.253l-5-5ZM26.61,8.387a1.328,1.328,0,0,0,0-1.88l-3.12-3.12a1.328,1.328,0,0,0-1.88,0l-2.44,2.44,5,5,2.44-2.44Z" transform="translate(1.5 1.499)"/>
+  <path id="패스_19" data-name="패스 19" class="cls-2" d="M0,0H36V36H0Z"/>
+</svg>

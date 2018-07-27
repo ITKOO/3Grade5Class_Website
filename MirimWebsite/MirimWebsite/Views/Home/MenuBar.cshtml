@@ -1,0 +1,33 @@
+﻿@using MirimWebsite.Models
+@{
+    Layout = null;
+}
+<!-- 2018.06.12 koo -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3학년 5반 웹사이트</title>
+    <!-- 3학년 5반 웹사이트 관련 stylesheet-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- Google Web Font 나눔고딕 글꼴 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="../img/logo.png">
+        <a href="@Url.Action("Index")" class="nav-title">MIRIM_2018_3_5</a>
+        <a href="@Url.Action("Seat")" class="nav-item">청소 | 자리</a>
+        <a href="@Url.Action("Gallery")" class="nav-item">갤러리</a>
+        <a href="@Url.Action("Materials")" class="nav-item">학습자료</a>
+        <a href="@Url.Action("Notice")" class="nav-item">공지사항</a>
+        <a href="@Url.Action("Index")" class="nav-item">홈</a>
+    </nav>
+
+</body>
+
+</html>

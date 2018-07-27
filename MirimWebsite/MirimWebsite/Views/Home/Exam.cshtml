@@ -1,0 +1,67 @@
+﻿
+@{
+    
+    Layout = null;
+    System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(Server.MapPath(@"~/images/"));
+    int count = dir.GetFiles().Length;
+    System.Diagnostics.Trace.WriteLine("/////////////" + count);
+
+
+
+
+    string[] stringArray = new string[count];
+    var j = 0;
+    System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(Server.MapPath(@"~/images/"));
+    
+     foreach (var item in di.GetFiles())
+                {
+                    // 파일 이름 출력
+                    stringArray[j] = item.Name;
+                    System.Diagnostics.Trace.WriteLine("FILE NAME : " + item.Name);
+                    j++;       
+                }
+
+     var imagePath = "";
+     imagePath = @"images/";
+     
+     
+     ///////////
+     for (int i = 0; i < count; i++)
+        {
+            var imgArray= stringArray[i];
+            var src = imagePath + imgArray;
+            <div><img src="@src" /></div>
+        }
+     
+     }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resizing Image</title>
+    
+</head>
+
+<body>
+    <h1>Thumbnail Image</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+            <label for="Image">Image</label>
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="file" name="file" />
+                <input type="submit" value="OK" />
+            }
+            <p>@count !!!!!!</p>
+            <br>
+            <br />
+            <div id="board" style="width:720px"></div>
+    </form>
+    <script language="JavaScript">
+  //  var imgArray;
+   
+
+    function del() {
+        document.getElementById('board').innerHTML = '';
+    }
+    </script>
+</body>
+</html>

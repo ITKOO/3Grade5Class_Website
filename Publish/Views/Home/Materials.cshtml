@@ -1,0 +1,154 @@
+﻿@using MirimWebsite.Models
+@model MirimWebsite.Models.CMaterials
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3학년 5반 웹사이트</title>
+    <!-- 3학년 5반 웹사이트 관련 stylesheet-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- Google Web Font 나눔고딕 글꼴 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 2018.06.12 koo : include html file-->
+    @Html.Partial("MenuBar")
+
+    <form action="">
+        <input type="file" name="materials">
+    </form>
+    <br><br>
+    <div class="modal-background" id="modal-background"></div>
+    <div class="section" id="section" style="width: 100%; height: 100%; padding-top: 60px; margin: 0 auto; text-align: center;">
+        <table style="margin: 0 auto;" id="noticeTable">
+
+            @foreach (CMaterials iter in ViewBag.theMaterials)
+            {
+                <tr>
+                    <td style="width: 850px;box-shadow: 0px 1px 3px #cecece; border-radius: 20px;text-align: left;padding:35px;background-color:#fff;display:inline-block;margin-bottom:35px;">
+                        @if (iter.bNew == 1)
+                        {
+                            <strong>New </strong>
+                        }
+                        &nbsp;@iter.theWriter
+                        <a href="@Url.Action("MaterialsDelete", "home", new { uid = @iter.theUniqueID })"><img src="../../icon/closeIcon.svg" width="30" style="float:right;margin-left:15px;"></a>
+                        <!--<img src="../../icon/pencil.svg" width="30" style="float:right;" class="ho" onclick="viewmaterialEditDiv()"> -->
+          
+                        <p style="font-size: 1.3em; color: #000; text-indent: 10px;">@iter.theTitle</p>
+
+                        <span style="font-size:1.1em;color:#000;float:right;">@iter.theDate</span>
+                        <a style="margin-left:10px" href="../Material/@iter.theAttachFile">@iter.theFileName</a>
+                    </td>
+
+                </tr>
+            }
+            <tr>
+                <td colspan="4">
+                    @Html.PageLinks((int)ViewBag.theCurrentPage, (int)ViewBag.theTotalPage, x => Url.Action("Materials", new { page = x }))
+                </td>
+            </tr>
+        </table>
+
+        <div id="materialDiv" class="floatDiv" style="position:absolute;margin-top:5%;">
+            <br><br>
+            <span class="cancel" onclick="cancel()">X</span>
+            <br>
+            <span style=" color: #008156; font-size: 1.3em; margin-right:130px;">학습자료 등록</span><br>
+
+            <br><br>
+            @using (Html.BeginForm("MaterialsOK", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+                @Html.TextBoxFor(x => x.theWriter, new { @placeholder = "작성자를 입력하세요.", @class = "inputText", @style = "margim:0 auto;" })
+
+                @Html.TextBoxFor(x => x.theTitle, new { @placeholder = "제목을 입력하세요.", @class = "inputText", @style = "margim:0 auto;" })
+
+
+                @Html.TextBoxFor(x => x.theFile, null, new { type = "file", @class = "input-file" })<br><br><br>
+                <!--input type="file" name="materials">
+                @Html.DisplayTextFor(x => x.theAttachFile)-->
+
+
+                <!-- 작성 취소 버튼 -->
+                <input type="button" value="취소하기" onclick="cancel()" class="cancelBtn" style="margin: 0 auto;">
+                <div class="space"></div>
+                <!-- 작성 완료 버튼 -->
+                <input type="submit" value="등록하기" class="okBtn">
+
+            }
+
+            <br><br>
+        </div>
+
+        <!-- 수정 하는 Div -->
+        <div id="materialEditDiv" class="floatDiv" style="position:absolute;margin-top:5%;">
+            <br><br>
+            <span class="cancel" onclick="cancel()">X</span>
+            <br>
+            <span style=" color: #008156; font-size: 1.3em; margin-right:130px;">학습자료 수정</span><br>
+
+            <br><br>
+            @using (Html.BeginForm("MaterialsModify", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+                @Html.TextBoxFor(x => x.theWriter, new { @placeholder = "작성자", @class = "inputText", @style = "margim:0 auto;" })
+
+                @Html.TextBoxFor(x => x.theTitle, new { @placeholder = "제목", @class = "inputText", @style = "margim:0 auto;" })
+
+
+                @Html.TextBoxFor(x => x.theFile, null, new { type = "file", @class = "input-file" })<br><br><br>
+                <!--input type="file" name="materials">
+            @Html.DisplayTextFor(x => x.theAttachFile)-->
+
+
+                <!-- 작성 취소 버튼 -->
+                <input type="button" value="취소하기" onclick="cancel()" class="cancelBtn" style="margin: 0 auto;">
+                <div class="space"></div>
+                <!-- 작성 완료 버튼 -->
+                <input type="submit" value="수정하기" class="okBtn">
+
+            }
+
+            <br><br>
+        </div>
+
+        <div class="floatBtnLo" onclick="viewmaterialDiv()"><img src="../../icon/floatBtn.svg" class="floatBtn"></div>
+    </div>
+
+    <!--script src="../../../js/display.js">
+    </!--script-->
+    <script>
+    var materialDivStyle = document.getElementById('materialDiv');
+    var materialEditDiv = document.getElementById('materialEditDiv');
+    var modalBackground = document.getElementById('modal-background');
+
+    function viewmaterialDiv() {
+    materialDivStyle.style.display = "block"
+
+    modalBackground.style.display = "inline-block"
+    }
+
+    function viewmaterialEditDiv() {
+    materialEditDiv.style.display = "block"
+
+    modalBackground.style.display = "inline-block"
+    }
+
+
+    function cancel() {
+    materialDivStyle.style.display = "none"
+    materialEditDiv.style.display = "none"
+    modalBackground.style.display = "none"
+
+    }
+    </script>
+
+</body>
+</html>
